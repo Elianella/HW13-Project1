@@ -2,11 +2,14 @@
 
 The files in this repository were used to configure the network depicted below.
 
-https://drive.google.com/file/d/1NWOBRftReJLo1OXztHGSGR761aIuuk4B/view?usp=sharing 
+ <img src="/c/Users/User/HW13-Project1/Images/HW13 Project 1 Diagram" atl="Project 1 Resource Overview" style="max-wtdth:100%;"> 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  - ~/HW13-Project1/ansible/install-elk.yml
+- <a href="/c/Users/User/HW13-Project1/ansible/install-elk.yml">Elk Install</a>
+- <a href="/c/Users/User/HW13-Project1/pentest.yml">DVWA</a>
+- <a href="/c/Users/user/HW13-Project1/ansible/filebeat/roles/filebeat-playbook.yml">FileBeat</a>
+- <a href="/c/Users/user/HW13-Project1/ansible/metricbeat/roles/metricbeat-playbook.yml">MetricBeat</a>
 
 This document contains the following details:
 - Description of the Topologu
