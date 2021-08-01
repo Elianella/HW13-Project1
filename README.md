@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
- <img src="/c/Users/User/HW13-Project1/Images/HW13 Project 1 Diagram" atl="Project 1 Resource Overview" style="max-wtdth:100%;"> 
+ <img src="https://drive.google.com/file/d/1jzadLq-eREdFcg5E-6OZgiIP_8o9znPG/view?usp=sharing" atl="Project 1 Resource Overview" style="max-wtdth:100%;"> 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
