@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-- <a href="/c/Users/User/HW13-Project1/ansible/install-elk.yml">Elk Install</a>
+- <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/install-elk.yml">Elk Install</a>
 - <a href="/c/Users/User/HW13-Project1/pentest.yml">DVWA</a>
 - <a href="/c/Users/user/HW13-Project1/ansible/filebeat/roles/filebeat-playbook.yml">FileBeat</a>
 - <a href="/c/Users/user/HW13-Project1/ansible/metricbeat/roles/metricbeat-playbook.yml">MetricBeat</a>
