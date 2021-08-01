@@ -1,6 +1,6 @@
 ## Automated ELK Stack Deployment
 
-The files in this repository were used to configure the network depicted below.
+**The files in this repository were used to configure the network depicted below.**
 
  <img src="https://github.com/Elianella/HW13-Project1/blob/main/Images/Diagram.png"> 
 
@@ -32,7 +32,7 @@ Load balancing ensures that the application will be highly available and reliabl
 - A loadbalancer distributes network traffic across multiple servers.
   - This ensures no single server bears too much demand. By spreading the work evenly, load balancing improves application responsiveness.
   - If necessary, load balancers remove  unhealthy servers from the pool until they are restored.
-  - This increases high availability and helps prevent overloads as well as distributed denial-of-service (DDoS) attacks._
+  - This increases high availability and helps prevent overloads as well as distributed denial-of-service (DDoS) attacks.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resources.
 - Filebeat is meant primarily to watch for system logs and forward any changes to the Elasticsearch Host_TODO: What does Filebeat watch for?_
