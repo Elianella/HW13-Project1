@@ -1,5 +1,5 @@
 ---
-- name: Configure Elk VM with Docker
+- name: Configure Elk VM with Dockeer
   hosts: elk
   remote_user: azdmin
   become: true
@@ -25,33 +25,31 @@
         name: docker
         state: present
 
-      #Use sysctl module
+      # Use sysctl module
     - name: increase virtual memory
       command: sysctl -w vm.max_map_count=262144
 
-      #Use sysctl module
+      # Use sysctl module
     - name: Use more memory
       sysctl:
         name: vm.max_map_count
         value: '262144'
         state: present
-        reload: yes
+        reloa: yes
 
-      # Use dockeer_container module
+      # Use docker_container module
     - name: download and launch a docker elk container
       docker_container:
         name: elk
         image: sebp/elk:761
         state: started
         restart_policy: always
-        published_ports:
+        published_ports: 
           - 5601:5601
           - 9200:9200
           - 5044:5044
- 
-     # Systemd module
+      # Systemd module
     - name: Enable docker service on boot
-      systemd: 
+      systemd:
         name: docker
         enabled: yes
- 
