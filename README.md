@@ -4,14 +4,14 @@
 
  <img src="https://github.com/Elianella/HW13-Project1/blob/main/Images/Diagram.png"> 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live _ELK_ deployment on _Azure_. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as _Filebeat_.
 
 - <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/install-elk.yml">Elk Install</a>
 - <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/pentest.yml">DVWA</a>
 - <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/filebeat/roles/filebeat-playbook.yml">FileBeat</a>
 - <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/metricbeat/roles/metricbeat-playbook.yml">MetricBeat</a>
 
-This document contains the following details:
+**This document contains the following details:**
 - Description of the Topologu
 - Access Policies
 - ELK Configuration
@@ -24,29 +24,27 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available and reliable, in addition to restricting access to the network.
-- A Jumpbox or Jump Server serves as a gateway to gain entry into a remote network. 
+_Load balancing_ ensures that the application will be highly available and reliable, in addition to restricting access to the network.
+- A _Jumpbox_ or _Jump Server_ serves as a gateway to gain entry into a remote network. 
   - This helps us to open only one port instead of several ports to connect different virtual machines present in the cloud. 
   - Many times the primary mode of access is ssh and without the key access is forbidden.
-  - The Jumpbox can be kept inside a specific subnet (Jumpbox Subnet) with high monitoring capabilities as a security improvement.
-- A loadbalancer distributes network traffic across multiple servers.
-  - This ensures no single server bears too much demand. By spreading the work evenly, load balancing improves application responsiveness.
-  - If necessary, load balancers remove  unhealthy servers from the pool until they are restored.
+  - The _Jumpbox_ can be kept inside a specific subnet (Jumpbox Subnet) with high monitoring capabilities as a security improvement.
+- A _Loadbalancer_ distributes network traffic across multiple servers.
+  - This ensures no single server bears too much demand. By spreading the work evenly, _load balancing_ improves application responsiveness.
+  - If necessary, _load balancers_ remove  unhealthy servers from the pool until they are restored.
   - This increases high availability and helps prevent overloads as well as distributed denial-of-service (DDoS) attacks.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resources.
-- Filebeat is meant primarily to watch for system logs and forward any changes to the Elasticsearch Host_TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- _Filebeat_ monitors the log files that you specify _(audit logs, deprecation logs, gc logs, server logs, and slow logs)_, collects log events, and forwards them to Elasticsearch for indexing.
+- _Metricbeat_ helps you monitor your servers by collecting metrics from the system and services running on the server.  It takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
-
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+|   Name   |       Function      | IP Address | Operating System |
+|:--------:|:-------------------:|:----------:|:----------------:|
+| Jump Box |       Gateway       |  10.0.0.7  |      Ubuntu      |
+|   Web-1  |      Web Server     |   10.0.05  |      Ubuntu      |
+|   Web-2  |      Web Server     |  10.0.0.6  |      Ubuntu      |
+|    Elk   | ElasticSearch Stack |  10.1.0.4  |      Ubuntu      |
 
 ### Access Policies
 
