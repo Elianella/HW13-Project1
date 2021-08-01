@@ -7,9 +7,9 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
 - <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/install-elk.yml">Elk Install</a>
-- <a href="/c/Users/User/HW13-Project1/pentest.yml">DVWA</a>
-- <a href="/c/Users/user/HW13-Project1/ansible/filebeat/roles/filebeat-playbook.yml">FileBeat</a>
-- <a href="/c/Users/user/HW13-Project1/ansible/metricbeat/roles/metricbeat-playbook.yml">MetricBeat</a>
+- <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/pentest.yml">DVWA</a>
+- <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/filebeat/roles/filebeat-playbook.yml">FileBeat</a>
+- <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/metricbeat/roles/metricbeat-playbook.yml">MetricBeat</a>
 
 This document contains the following details:
 - Description of the Topologu
@@ -24,11 +24,18 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available and reliable, in addition to restricting access to the network.
+- A Jumpbox or Jump Server serves as a gateway to gain entry into a remote network. 
+  - This helps us to open only one port instead of several ports to connect different virtual machines present in the cloud. 
+  - Many times the primary mode of access is ssh and without the key access is forbidden.
+  - The Jumpbox can be kept inside a specific subnet (Jumpbox Subnet) with high monitoring capabilities as a security improvement.
+- A loadbalancer distributes network traffic across multiple servers.
+  - This ensures no single server bears too much demand. By spreading the work evenly, load balancing improves application responsiveness.
+  - If necessary, load balancers remove  unhealthy servers from the pool until they are restored.
+  - This increases high availability and helps prevent overloads as well as distributed denial-of-service (DDoS) attacks._
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resources.
+- Filebeat is meant primarily to watch for system logs and forward any changes to the Elasticsearch Host_TODO: What does Filebeat watch for?_
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
