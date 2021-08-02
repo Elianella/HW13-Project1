@@ -6,7 +6,7 @@
 
 These files have been tested and used to generate a live _ELK_ deployment on _Azure_. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as _Filebeat_.
 
-- <a href="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/Elk/install-elk.yml">Elk Install</a>
+- <a href="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/ELK/install-elk.yml">Elk Install</a>
 - <a href="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/DVWA/pentest.yml">DVWA</a>
 - <a href="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/filebeat/roles/filebeat-playbook.yml">FileBeat</a>
 - <a href="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/metricbeat/roles/metricbeat-playbook.yml">MetricBeat</a>
