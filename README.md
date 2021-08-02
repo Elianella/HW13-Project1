@@ -114,6 +114,7 @@ sudo dpkg -i metricbeat-7.6.1-amd64.deb (using metricbeat as an example)
 - nano /etc/ansible/hosts
   -  edit hosts by adding the machines for elk group
 <img src="https://github.com/Elianella/HW13-Project1/blob/main/Images/hosts.png">
+
 - ansible-playbook metricbeat-playbook.yml
 - check your installation is working by visiting in a browser: http://51.141.184.242:5601/app/kibana#/home/tutorial/dockerMetrics
   - you should see something like this:
