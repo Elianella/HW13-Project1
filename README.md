@@ -2,14 +2,14 @@
 
 **The files in this repository were used to configure the network depicted below.**
 
- <img src="https://github.com/Elianella/HW13-Project1/blob/main/Images/Diagram.png"> 
+ <img src="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/Images/Diagram.png"> 
 
 These files have been tested and used to generate a live _ELK_ deployment on _Azure_. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as _Filebeat_.
 
-- <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/install-elk.yml">Elk Install</a>
-- <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/pentest.yml">DVWA</a>
-- <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/filebeat/roles/filebeat-playbook.yml">FileBeat</a>
-- <a href="https://github.com/Elianella/HW13-Project1/blob/main/ansible/metricbeat/roles/metricbeat-playbook.yml">MetricBeat</a>
+- <a href="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/Elk/install-elk.yml">Elk Install</a>
+- <a href="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/DVWA/pentest.yml">DVWA</a>
+- <a href="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/filebeat/roles/filebeat-playbook.yml">FileBeat</a>
+- <a href="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/metricbeat/roles/metricbeat-playbook.yml">MetricBeat</a>
 
 **This document contains the following details:**
 - Description of the Topologu
@@ -81,7 +81,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-<img src="https://github.com/Elianella/HW13-Project1/blob/main/Images/docker-ps.png">
+<img src="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/Images/docker-ps.png">
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -93,8 +93,8 @@ We have installed the following Beats on these machines:
 - **Metricbeat**
 
 These Beats allow us to collect the following information from each machine:
-- Filebeat monitors the log files or locations specified by collecting log events, and then forwarding them to elasticsearch for indexing.
-- Metricbeat allows us to collect various metrics and statistics from the operating system and various processes running on the specified servers and ships them to the output that you specify, like Elasticsearch.
+- _Filebeat_ monitors the log files or locations specified by collecting log events, and then forwarding them to elasticsearch for indexing.
+- _Metricbeat_ allows us to collect various metrics and statistics from the operating system and various processes running on the specified servers and ships them to the output that you specify, like Elasticsearch.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -105,7 +105,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to Kibana (http://[Host IP]:5601/app/kibana) to check that the installation worked as expected.
 
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+**Bonus**
 - ssh azdmin@138.91.147.29 (connect to Jump Box)
 - sudo docker container start [name of container] (start ansible container)
 - sudo docker container attach [name of container] (run ansible container)
@@ -113,9 +113,9 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 sudo dpkg -i metricbeat-7.6.1-amd64.deb (using metricbeat as an example)
 - nano /etc/ansible/hosts
   -  edit hosts by adding the machines for elk group
-<img src="https://github.com/Elianella/HW13-Project1/blob/main/Images/hosts.png">
+<img src="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/Images/hosts.png">
 
 - ansible-playbook metricbeat-playbook.yml
 - check your installation is working by visiting in a browser: http://51.141.184.242:5601/app/kibana#/home/tutorial/dockerMetrics
   - you should see something like this:
-<img src="https://github.com/Elianella/HW13-Project1/blob/main/Images/Metricbeat-dashboard.png">
+<img src="https://github.com/Elianella/HW13-Project1/blob/main/Scripts/ansible/Images/Metricbeat-dashboard.png">
